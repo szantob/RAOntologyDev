@@ -1,12 +1,143 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/szant/ontologies/2022/10/untitled-ontology-14#"
-     xml:base="http://www.semanticweb.org/szant/ontologies/2022/10/untitled-ontology-14"
+<rdf:RDF xmlns="https://github.com/szantob/RAOntologyDev#"
+     xml:base="https://github.com/szantob/RAOntologyDev"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/szant/ontologies/2022/10/untitled-ontology-14"/>
+    <owl:Ontology rdf:about="https://github.com/szantob/RAOntologyDev"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#ConnectsTo -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/szantob/RAOntologyDev#ConnectsTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
+        <rdfs:range rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#ControlledBy -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/szantob/RAOntologyDev#ControlledBy">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/szantob/RAOntologyDev#ConnectsTo"/>
+        <owl:inverseOf rdf:resource="https://github.com/szantob/RAOntologyDev#Controls"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
+        <rdfs:range rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#Controls -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/szantob/RAOntologyDev#Controls">
+        <rdfs:subPropertyOf rdf:resource="https://github.com/szantob/RAOntologyDev#ConnectsTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
+        <rdfs:range rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#DynamicModel -->
+
+    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#DynamicModel">
+        <rdfs:subClassOf rdf:resource="https://github.com/szantob/RAOntologyDev#Model"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#DynamicModelElement -->
+
+    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#DynamicModelElement">
+        <rdfs:subClassOf rdf:resource="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#Model -->
+
+    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#Model"/>
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#ModelElement -->
+
+    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#StaticModel -->
+
+    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#StaticModel">
+        <rdfs:subClassOf rdf:resource="https://github.com/szantob/RAOntologyDev#Model"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#StaticModelElement -->
+
+    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#StaticModelElement">
+        <rdfs:subClassOf rdf:resource="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#OutputPipe -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/szantob/RAOntologyDev#OutputPipe"/>
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#Valve -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/szantob/RAOntologyDev#Valve">
+        <ConnectsTo rdf:resource="https://github.com/szantob/RAOntologyDev#OutputPipe"/>
+        <ConnectsTo rdf:resource="https://github.com/szantob/RAOntologyDev#inputPipe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/szantob/RAOntologyDev#inputPipe -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/szantob/RAOntologyDev#inputPipe"/>
 </rdf:RDF>
 
 
