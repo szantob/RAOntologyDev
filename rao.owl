@@ -1,144 +1,125 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://github.com/szantob/RAOntologyDev#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="https://github.com/szantob/RAOntologyDev"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://github.com/szantob/RAOntologyDev"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#ConnectsTo -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/szantob/RAOntologyDev#ConnectsTo">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
-        <rdfs:range rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#ControlledBy -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/szantob/RAOntologyDev#ControlledBy">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/szantob/RAOntologyDev#ConnectsTo"/>
-        <owl:inverseOf rdf:resource="https://github.com/szantob/RAOntologyDev#Controls"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
-        <rdfs:range rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#Controls -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/szantob/RAOntologyDev#Controls">
-        <rdfs:subPropertyOf rdf:resource="https://github.com/szantob/RAOntologyDev#ConnectsTo"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
-        <rdfs:range rdf:resource="https://github.com/szantob/RAOntologyDev#StaticModelElement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#DynamicModel -->
-
-    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#DynamicModel">
-        <rdfs:subClassOf rdf:resource="https://github.com/szantob/RAOntologyDev#Model"/>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#DynamicModelElement -->
-
-    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#DynamicModelElement">
-        <rdfs:subClassOf rdf:resource="https://github.com/szantob/RAOntologyDev#ModelElement"/>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#Model -->
-
-    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#Model"/>
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#ModelElement -->
-
-    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#ModelElement"/>
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#StaticModel -->
-
-    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#StaticModel">
-        <rdfs:subClassOf rdf:resource="https://github.com/szantob/RAOntologyDev#Model"/>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#StaticModelElement -->
-
-    <owl:Class rdf:about="https://github.com/szantob/RAOntologyDev#StaticModelElement">
-        <rdfs:subClassOf rdf:resource="https://github.com/szantob/RAOntologyDev#ModelElement"/>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#OutputPipe -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/szantob/RAOntologyDev#OutputPipe"/>
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#Valve -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/szantob/RAOntologyDev#Valve">
-        <ConnectsTo rdf:resource="https://github.com/szantob/RAOntologyDev#OutputPipe"/>
-        <ConnectsTo rdf:resource="https://github.com/szantob/RAOntologyDev#inputPipe"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/szantob/RAOntologyDev#inputPipe -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/szantob/RAOntologyDev#inputPipe"/>
-</rdf:RDF>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://github.com/szantob/RAOntologyDev">
+    <Prefix name="" IRI="https://github.com/szantob/RAOntologyDev#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#DynamicModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DynamicModelElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StaticModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StaticModelElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ConnectsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ControlledBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Controls"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OutputPipe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Valve"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inputPipe"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#DynamicModel"/>
+        <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DynamicModelElement"/>
+        <Class IRI="#ModelElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StaticModel"/>
+        <Class IRI="#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StaticModelElement"/>
+        <Class IRI="#ModelElement"/>
+    </SubClassOf>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ConnectsTo"/>
+        <NamedIndividual IRI="#Valve"/>
+        <NamedIndividual IRI="#OutputPipe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ConnectsTo"/>
+        <NamedIndividual IRI="#Valve"/>
+        <NamedIndividual IRI="#inputPipe"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ControlledBy"/>
+        <ObjectProperty IRI="#ConnectsTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Controls"/>
+        <ObjectProperty IRI="#ConnectsTo"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ControlledBy"/>
+        <ObjectProperty IRI="#Controls"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#ConnectsTo"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#ControlledBy"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Controls"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ConnectsTo"/>
+        <Class IRI="#StaticModelElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ControlledBy"/>
+        <Class IRI="#StaticModelElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Controls"/>
+        <Class IRI="#StaticModelElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ConnectsTo"/>
+        <Class IRI="#StaticModelElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ControlledBy"/>
+        <Class IRI="#StaticModelElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Controls"/>
+        <Class IRI="#StaticModelElement"/>
+    </ObjectPropertyRange>
+</Ontology>
 
 
 
