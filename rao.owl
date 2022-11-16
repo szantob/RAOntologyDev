@@ -6,29 +6,38 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://github.com/szantob/RAOntologyDev">
-    <Prefix name="" IRI="https://github.com/szantob/RAOntologyDev#"/>
+    <Prefix name="" IRI="https://github.com/szantob/RAOntologyDev"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="#DynamicModel"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ModelPort"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DynamicModelElement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Model"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ModelElement"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#StaticModel"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#StaticModelElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#medium"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#port"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#portOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#ConnectsTo"/>
@@ -40,40 +49,32 @@
         <ObjectProperty IRI="#Controls"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#OutputPipe"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#waterThreatmentSystem"/>
     </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Valve"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#inputPipe"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="#DynamicModel"/>
-        <Class IRI="#Model"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#DynamicModelElement"/>
-        <Class IRI="#ModelElement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#StaticModel"/>
-        <Class IRI="#Model"/>
-    </SubClassOf>
-    <SubClassOf>
+    <EquivalentClasses>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
         <Class IRI="#StaticModelElement"/>
-        <Class IRI="#ModelElement"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ModelPort"/>
+        <Class IRI="#StaticModelElement"/>
     </SubClassOf>
-    <ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#port"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#portOf"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#ConnectsTo"/>
-        <NamedIndividual IRI="#Valve"/>
-        <NamedIndividual IRI="#OutputPipe"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#ConnectsTo"/>
-        <NamedIndividual IRI="#Valve"/>
-        <NamedIndividual IRI="#inputPipe"/>
-    </ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
+    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ControlledBy"/>
         <ObjectProperty IRI="#ConnectsTo"/>
@@ -82,6 +83,10 @@
         <ObjectProperty IRI="#Controls"/>
         <ObjectProperty IRI="#ConnectsTo"/>
     </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#port"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#portOf"/>
+    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#ControlledBy"/>
         <ObjectProperty IRI="#Controls"/>
@@ -95,6 +100,21 @@
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#Controls"/>
     </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#port"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#portOf"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ModelPort"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#ConnectsTo"/>
         <Class IRI="#StaticModelElement"/>
@@ -107,6 +127,22 @@
         <ObjectProperty IRI="#Controls"/>
         <Class IRI="#StaticModelElement"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
+        <Class IRI="#StaticModelElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#medium"/>
+        <Class IRI="#DynamicModelElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#port"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ModelPort"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#portOf"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#ConnectsTo"/>
         <Class IRI="#StaticModelElement"/>
