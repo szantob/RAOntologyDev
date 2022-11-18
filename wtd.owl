@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/admin/ontologies/2022/10/untitled-ontology-5"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/admin/ontologies/2022/10/untitled-ontology-5">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>https://github.com/szantob/RAOntologyDev</Import>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AbstractPipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#BallValve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ChlorineConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ChlorineTank"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#DataConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgePipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FluidConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#MechanicalConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Tank"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Valve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ValveActuator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterTank"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineTank"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineValve"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineValveActuator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputPipe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputPipe-InputValve-Connection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve-threatmentTankConnection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValveActuator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValveBallValve"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValvePipe1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValvePipe2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputPipe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValve"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValve-outputPipe-Connection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValveActuator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#threatmentTank"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#threatmentTank-outputValve-Connection"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionName"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AbstractPipe"/>
+        <Class IRI="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#BallValve"/>
+        <Class IRI="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ChlorineConnection"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FluidConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ChlorineTank"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Tank"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#DataConnection"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FluidConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgePipe"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AbstractPipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgePipe"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgeElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FluidConnection"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#MechanicalConnection"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pipe"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AbstractPipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Tank"/>
+        <Class IRI="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Valve"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AbstractPipe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ValveActuator"/>
+        <Class IRI="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterConnection"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FluidConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterTank"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Tank"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ChlorineTank"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineTank"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Valve"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineValve"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ValveActuator"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineValveActuator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgePipe"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputPipe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterConnection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputPipe-InputValve-Connection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Valve"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterConnection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve-threatmentTankConnection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ValveActuator"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValveActuator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#BallValve"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValveBallValve"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pipe"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValvePipe1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pipe"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValvePipe2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgePipe"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputPipe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Valve"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValve"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterConnection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValve-outputPipe-Connection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ValveActuator"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValveActuator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterTank"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#threatmentTank"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterConnection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#threatmentTank-outputValve-Connection"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputPipe-InputValve-Connection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputPipe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputPipe-InputValve-Connection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValveBallValve"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValvePipe1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValvePipe2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve-threatmentTankConnection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve-threatmentTankConnection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#threatmentTank"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValve-outputPipe-Connection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputPipe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValve-outputPipe-Connection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValve"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#threatmentTank-outputValve-Connection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValve"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#threatmentTank-outputValve-Connection"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#threatmentTank"/>
+    </ObjectPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionName"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#connection</IRI>
+        <Literal xml:lang="en"></Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
