@@ -13,147 +13,190 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ConnectionType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgeElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FailureMode"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ModelPort"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Scenario"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DynamicModelElement"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Situation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#StaticModelElement"/>
+        <Class IRI="#ModelElement"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#medium"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#port"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#failureModes"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#portOf"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenario"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#ConnectsTo"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenarioSteps"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#ControlledBy"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineTank"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#Controls"/>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineValve"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineValveActuator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputPipe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValve"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValveActuator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputPipe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValve"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputValveActuator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#threatmentTank"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#waterThreatmentSystem"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
-        <Class IRI="#StaticModelElement"/>
+        <Class IRI="#ModelElement"/>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ModelPort"/>
-        <Class IRI="#StaticModelElement"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgeElement"/>
+        <Class IRI="#ModelElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FailureMode"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Situation"/>
     </SubClassOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionType"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#port"/>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#portOf"/>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#ConnectsTo"/>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#ControlledBy"/>
-        <ObjectProperty IRI="#ConnectsTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#Controls"/>
-        <ObjectProperty IRI="#ConnectsTo"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#port"/>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#portOf"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#ControlledBy"/>
-        <ObjectProperty IRI="#Controls"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenario"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenarioSteps"/>
     </InverseObjectProperties>
-    <SymmetricObjectProperty>
-        <ObjectProperty IRI="#ConnectsTo"/>
-    </SymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="#ControlledBy"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="#Controls"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
     </AsymmetricObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
+        <Class IRI="#ModelElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionType"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#port"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#portOf"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ModelPort"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#failureModes"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#ConnectsTo"/>
-        <Class IRI="#StaticModelElement"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#failureModes"/>
+        <Class IRI="#ModelElement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#ControlledBy"/>
-        <Class IRI="#StaticModelElement"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenario"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Situation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#Controls"/>
-        <Class IRI="#StaticModelElement"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenarioSteps"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Scenario"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionType"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ConnectionType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+        <Class IRI="#ModelElement"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
-        <Class IRI="#StaticModelElement"/>
+        <Class IRI="#ModelElement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#medium"/>
-        <Class IRI="#DynamicModelElement"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgeElement"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#port"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ModelPort"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#failureModes"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FailureMode"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#portOf"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenario"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Scenario"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#ConnectsTo"/>
-        <Class IRI="#StaticModelElement"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#ControlledBy"/>
-        <Class IRI="#StaticModelElement"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#Controls"/>
-        <Class IRI="#StaticModelElement"/>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenarioSteps"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Situation"/>
     </ObjectPropertyRange>
 </Ontology>
 
