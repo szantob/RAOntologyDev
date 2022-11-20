@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/admin/ontologies/2022/10/ftma"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma">
+    <Prefix name="" IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Connection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EdgeConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connectsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#edgeConnection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOf"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Model"/>
+        <Class IRI="#ModelElement"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Connection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#connectsTo"/>
+            <Class IRI="#ModelElement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EdgeConnection"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EdgeConnection"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#connection"/>
+            <Class IRI="#ModelElement"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#edgeConnection"/>
+            <Class IRI="#EdgeConnection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Model"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#contains"/>
+            <Class IRI="#ModelElement"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelElement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#connection"/>
+            <Class IRI="#Connection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModelElement"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#partOf"/>
+            <Class IRI="#Model"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#connectsTo"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#partOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#connection"/>
+        <ObjectProperty IRI="#connectsTo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#contains"/>
+        <ObjectProperty IRI="#partOf"/>
+    </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#contains"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#partOf"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#connection"/>
+        <Class IRI="#ModelElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#connectsTo"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#edgeConnection"/>
+        <Class IRI="#Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#connection"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#connectsTo"/>
+        <Class IRI="#ModelElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#ModelElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#edgeConnection"/>
+        <Class IRI="#EdgeConnection"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

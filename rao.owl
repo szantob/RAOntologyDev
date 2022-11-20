@@ -16,24 +16,6 @@
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ConnectionType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgeElement"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FailureMode"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Scenario"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Situation"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#ModelElement"/>
     </Declaration>
     <Declaration>
@@ -50,15 +32,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#failureModes"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenario"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenarioSteps"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineTank"/>
@@ -93,18 +66,6 @@
     <Declaration>
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#waterThreatmentSystem"/>
     </Declaration>
-    <EquivalentClasses>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
-        <Class IRI="#ModelElement"/>
-    </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgeElement"/>
-        <Class IRI="#ModelElement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FailureMode"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Situation"/>
-    </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionType"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -117,10 +78,9 @@
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
     </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenario"/>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenarioSteps"/>
-    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionType"/>
+    </FunctionalObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
     </AsymmetricObjectProperty>
@@ -142,37 +102,9 @@
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Model"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#failureModes"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#failureModes"/>
-        <Class IRI="#ModelElement"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenario"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Situation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenarioSteps"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Scenario"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connection"/>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionType"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ConnectionType"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
@@ -181,22 +113,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
         <Class IRI="#ModelElement"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgeElement"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#failureModes"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FailureMode"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenario"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Scenario"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#scenarioSteps"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Situation"/>
     </ObjectPropertyRange>
 </Ontology>
 

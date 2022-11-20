@@ -6,12 +6,13 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/admin/ontologies/2022/10/untitled-ontology-5">
+    <Prefix name="" IRI="http://www.semanticweb.org/admin/ontologies/2022/10/untitled-ontology-5"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Import>https://github.com/szantob/RAOntologyDev</Import>
+    <Import>http://www.semanticweb.org/admin/ontologies/2022/10/ftma</Import>
     <Declaration>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AbstractPipe"/>
     </Declaration>
@@ -26,9 +27,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#DataConnection"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgePipe"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FluidConnection"/>
@@ -53,6 +51,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterTank"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Valve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterThteatmentSystem"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineTank"/>
@@ -108,13 +112,22 @@
     <Declaration>
         <AnnotationProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionName"/>
     </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AbstractPipe"/>
-        <Class IRI="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#ModelElement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#BallValve"/>
-        <Class IRI="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#ModelElement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ChlorineConnection"/>
@@ -129,20 +142,12 @@
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FluidConnection"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgePipe"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AbstractPipe"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgePipe"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgeElement"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FluidConnection"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#Connection"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#MechanicalConnection"/>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Connection"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#Connection"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pipe"/>
@@ -150,7 +155,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Tank"/>
-        <Class IRI="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#ModelElement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Valve"/>
@@ -158,7 +163,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ValveActuator"/>
-        <Class IRI="https://github.com/szantob/RAOntologyDev#ModelElement"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#ModelElement"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterConnection"/>
@@ -167,6 +172,14 @@
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterTank"/>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Tank"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Valve"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterThteatmentSystem"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#Model"/>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#ChlorineTank"/>
@@ -181,7 +194,7 @@
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineValveActuator"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgePipe"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pipe"/>
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputPipe"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -213,7 +226,7 @@
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#inputValvePipe2"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#EdgePipe"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Pipe"/>
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#outputPipe"/>
     </ClassAssertion>
     <ClassAssertion>
