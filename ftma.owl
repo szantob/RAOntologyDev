@@ -16,7 +16,13 @@
         <Class IRI="#Connection"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ConnectionProperty"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#EdgeConnection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FailureMode"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Model"/>
@@ -37,7 +43,19 @@
         <ObjectProperty IRI="#edgeConnection"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#failureMode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#filureModeOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#partOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#property"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#propertyOf"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Model"/>
@@ -45,10 +63,31 @@
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Connection"/>
-        <ObjectSomeValuesFrom>
+        <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#connectsTo"/>
             <Class IRI="#ModelElement"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#property"/>
+            <Class IRI="#ConnectionProperty"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectionProperty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#failureMode"/>
+            <Class IRI="#FailureMode"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectionProperty"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#propertyOf"/>
+            <Class IRI="#Connection"/>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EdgeConnection"/>
@@ -60,6 +99,13 @@
             <ObjectProperty IRI="#connection"/>
             <Class IRI="#ModelElement"/>
         </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FailureMode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#filureModeOf"/>
+            <Class IRI="#ConnectionProperty"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Model"/>
@@ -105,6 +151,14 @@
         <ObjectProperty IRI="#contains"/>
         <ObjectProperty IRI="#partOf"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#failureMode"/>
+        <ObjectProperty IRI="#filureModeOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#property"/>
+        <ObjectProperty IRI="#propertyOf"/>
+    </InverseObjectProperties>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#contains"/>
     </TransitiveObjectProperty>
@@ -127,6 +181,22 @@
         <ObjectProperty IRI="#edgeConnection"/>
         <Class IRI="#Model"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#failureMode"/>
+        <Class IRI="#ConnectionProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#filureModeOf"/>
+        <Class IRI="#FailureMode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#property"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#propertyOf"/>
+        <Class IRI="#ConnectionProperty"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#connection"/>
         <Class IRI="#Connection"/>
@@ -143,6 +213,27 @@
         <ObjectProperty IRI="#edgeConnection"/>
         <Class IRI="#EdgeConnection"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#failureMode"/>
+        <Class IRI="#FailureMode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#filureModeOf"/>
+        <Class IRI="#ConnectionProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#property"/>
+        <Class IRI="#ConnectionProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#propertyOf"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#filureModeOf</IRI>
+        <Literal>failureModeOf</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
