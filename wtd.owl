@@ -1,0 +1,150 @@
+@prefix : <http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wtd: <http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ftma: <http://www.semanticweb.org/admin/ontologies/2022/10/ftma#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo> .
+
+<http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo> rdf:type owl:Ontology ;
+                                                                           owl:versionIRI <http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo/1.0.0> ;
+                                                                           owl:imports <http://www.semanticweb.org/admin/ontologies/2022/10/ftma> .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#ChlorineConnection
+wtd:ChlorineConnection rdf:type owl:Class ;
+                       rdfs:subClassOf wtd:FluidConnection .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#Controller
+wtd:Controller rdf:type owl:Class ;
+               rdfs:subClassOf ftma:ModelElement .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#DataConnection
+wtd:DataConnection rdf:type owl:Class ;
+                   rdfs:subClassOf ftma:Connection .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#Flowrate
+wtd:Flowrate rdf:type owl:Class ;
+             rdfs:subClassOf wtd:FluidProperty .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#FluidConnection
+wtd:FluidConnection rdf:type owl:Class ;
+                    rdfs:subClassOf ftma:Connection .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#FluidProperty
+wtd:FluidProperty rdf:type owl:Class ;
+                  rdfs:subClassOf ftma:ConnectionProperty .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#MechanicalConnection
+wtd:MechanicalConnection rdf:type owl:Class ;
+                         rdfs:subClassOf ftma:Connection .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#Pressure
+wtd:Pressure rdf:type owl:Class ;
+             rdfs:subClassOf wtd:FluidProperty .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#Tank
+wtd:Tank rdf:type owl:Class ;
+         rdfs:subClassOf ftma:ModelElement .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#Valve
+wtd:Valve rdf:type owl:Class ;
+          rdfs:subClassOf ftma:ModelElement .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#ValveActuator
+wtd:ValveActuator rdf:type owl:Class ;
+                  rdfs:subClassOf ftma:ModelElement .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#Volume
+wtd:Volume rdf:type owl:Class ;
+           rdfs:subClassOf wtd:FluidProperty .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#WaterConnection
+wtd:WaterConnection rdf:type owl:Class ;
+                    rdfs:subClassOf wtd:FluidConnection .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#WaterInputConnection
+wtd:WaterInputConnection rdf:type owl:Class ;
+                         rdfs:subClassOf ftma:EdgeConnection ,
+                                         wtd:WaterConnection .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#WaterOutputConnection
+wtd:WaterOutputConnection rdf:type owl:Class ;
+                          rdfs:subClassOf ftma:EdgeConnection ,
+                                          wtd:WaterConnection .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#WaterThreamentSystem
+wtd:WaterThreamentSystem rdf:type owl:Class ;
+                         rdfs:subClassOf ftma:Model .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#chlorineTank
+wtd:chlorineTank rdf:type owl:NamedIndividual ,
+                          wtd:Tank .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#chlorineValve
+wtd:chlorineValve rdf:type owl:NamedIndividual ,
+                           wtd:Valve .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#chlorineValveActuator
+wtd:chlorineValveActuator rdf:type owl:NamedIndividual ,
+                                   wtd:ValveActuator .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#inputValve
+wtd:inputValve rdf:type owl:NamedIndividual ,
+                        wtd:Valve .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#inputValveActuator
+wtd:inputValveActuator rdf:type owl:NamedIndividual ,
+                                wtd:ValveActuator .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#outputValve
+wtd:outputValve rdf:type owl:NamedIndividual ,
+                         wtd:Valve .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#outputValveActuator
+wtd:outputValveActuator rdf:type owl:NamedIndividual ,
+                                 wtd:ValveActuator .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#threatmentTank
+wtd:threatmentTank rdf:type owl:NamedIndividual ,
+                            wtd:Tank .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/WaterThreatmentDemo#waterThreatmentSystem
+wtd:waterThreatmentSystem rdf:type owl:NamedIndividual ,
+                                   ftma:Model .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
