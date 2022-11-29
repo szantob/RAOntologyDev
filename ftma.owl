@@ -6,11 +6,11 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma">
-    <Prefix name="" IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="ftma" IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
         <Class IRI="#Connection"/>
@@ -22,6 +22,9 @@
         <Class IRI="#EdgeConnection"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ElementProperty"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#FailureMode"/>
     </Declaration>
     <Declaration>
@@ -29,6 +32,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ModelElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModelProperty"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#connection"/>
@@ -77,6 +83,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConnectionProperty"/>
+        <Class IRI="#ModelProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConnectionProperty"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#failureMode"/>
             <Class IRI="#FailureMode"/>
@@ -99,6 +109,10 @@
             <ObjectProperty IRI="#connection"/>
             <Class IRI="#ModelElement"/>
         </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElementProperty"/>
+        <Class IRI="#ModelProperty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FailureMode"/>
