@@ -53,10 +53,28 @@
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterTank"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#FluidFlowrate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FluidPressure"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Valve"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#WaterEdgeConnection"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#WaterThteatmentSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.co-ode.org/ontologies/ont.owl#chlorineTank"/>
@@ -112,15 +130,6 @@
     <Declaration>
         <AnnotationProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectionName"/>
     </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#contains"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#connectsTo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.co-ode.org/ontologies/ont.owl#edges"/>
-    </Declaration>
     <SubClassOf>
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#AbstractPipe"/>
         <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#ModelElement"/>
@@ -174,8 +183,24 @@
         <Class IRI="http://www.co-ode.org/ontologies/ont.owl#Tank"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#FluidFlowrate"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#ConnectionProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FluidPressure"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#ConnectionProperty"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Valve"/>
         <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterEdgeConnection"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#WaterConnection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterEdgeConnection"/>
+        <Class IRI="http://www.semanticweb.org/admin/ontologies/2022/10/ftma#EdgeConnection"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#WaterThteatmentSystem"/>
