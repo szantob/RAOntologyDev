@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model/1.0.0" uri="ftsm.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/admin/ontologies/2022/10/ftma" uri="ftma.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/admin/ontologies/2022/10/ftma" uri="rao.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
