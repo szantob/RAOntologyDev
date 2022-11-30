@@ -1,142 +1,50 @@
-@prefix : <http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#> .
+@prefix : <http://www.semanticweb.org/szant/ontologies/2022/10/raaml#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ftsm: <http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model> .
+@prefix raaml: <http://www.semanticweb.org/szant/ontologies/2022/10/raaml#> .
+@base <http://www.semanticweb.org/szant/ontologies/2022/10/raaml> .
 
-<http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model> rdf:type owl:Ontology ;
-                                                                       owl:versionIRI <http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model/1.0.0> .
+<http://www.semanticweb.org/szant/ontologies/2022/10/raaml> rdf:type owl:Ontology ;
+                                                             owl:versionIRI <http://www.semanticweb.org/szant/ontologies/2022/10/raaml/1.0.0> .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#connection
-ftsm:connection rdf:type owl:ObjectProperty ;
-                owl:inverseOf ftsm:connectsTo ;
-                rdfs:domain ftsm:Element ;
-                rdfs:range ftsm:Connection .
-
-
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#connectsTo
-ftsm:connectsTo rdf:type owl:ObjectProperty ;
-                rdfs:domain ftsm:Connection ;
-                rdfs:range ftsm:Element .
-
-
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#egdeConnection
-ftsm:egdeConnection rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty ;
-                    owl:inverseOf ftsm:egdeConnectionOf ;
-                    rdfs:domain ftsm:Model ;
-                    rdfs:range ftsm:Connection .
-
-
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#egdeConnectionOf
-ftsm:egdeConnectionOf rdf:type owl:ObjectProperty ;
-                      rdfs:domain ftsm:Connection ;
-                      rdfs:range ftsm:Model .
-
-
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#part
-ftsm:part rdf:type owl:ObjectProperty ;
-          owl:inverseOf ftsm:partOf ;
-          rdfs:domain ftsm:Element ;
-          rdfs:range ftsm:Model .
-
-
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#partOf
-ftsm:partOf rdf:type owl:ObjectProperty ;
-            rdfs:domain ftsm:Model ;
-            rdfs:range ftsm:Element .
-
-
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#property
-ftsm:property rdf:type owl:ObjectProperty ;
-              rdfs:domain ftsm:Connection ,
-                          ftsm:Element ;
-              rdfs:range ftsm:Property .
-
-
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#propertyOf
-ftsm:propertyOf rdf:type owl:ObjectProperty ;
-                rdfs:domain ftsm:Property ;
-                rdfs:range ftsm:Connection ,
-                           ftsm:Element .
+###  http://www.semanticweb.org/szant/ontologies/2022/10/raaml#part
+raaml:part rdf:type owl:ObjectProperty .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#Connection
-ftsm:Connection rdf:type owl:Class ;
-                rdfs:subClassOf [ rdf:type owl:Class ;
-                                  owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty ftsm:connectsTo ;
-                                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                         owl:onClass ftsm:Element
-                                                                       ]
-                                                                       [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty ftsm:egdeConnectionOf ;
-                                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                         owl:onClass ftsm:Model
-                                                                       ]
-                                                                     ) ;
-                                                  rdf:type owl:Class
-                                                ]
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty ftsm:connectsTo ;
-                                                  owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                  owl:onClass ftsm:Element
-                                                ]
-                                              )
-                                ] .
+###  http://www.semanticweb.org/szant/ontologies/2022/10/raaml#Causality
+raaml:Causality rdf:type owl:Class .
 
 
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#Element
-ftsm:Element rdf:type owl:Class ;
-             owl:equivalentClass ftsm:Model ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty ftsm:connection ;
-                               owl:someValuesFrom ftsm:Connection
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty ftsm:partOf ;
-                               owl:someValuesFrom ftsm:Model
-                             ] .
+###  http://www.semanticweb.org/szant/ontologies/2022/10/raaml#Effect
+raaml:Effect rdf:type owl:Class .
 
 
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#Model
-ftsm:Model rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty ftsm:egdeConnection ;
-                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                             owl:onClass ftsm:Connection
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty ftsm:part ;
-                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                             owl:onClass ftsm:Element
-                           ] .
+###  http://www.semanticweb.org/szant/ontologies/2022/10/raaml#FailureMode
+raaml:FailureMode rdf:type owl:Class .
 
 
-###  http://ftsrg.mit.bme.hu/szantob/ontologies/fault-trace-static-model#Property
-ftsm:Property rdf:type owl:Class ;
-              rdfs:subClassOf [ rdf:type owl:Class ;
-                                owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                owl:onProperty ftsm:propertyOf ;
-                                                owl:someValuesFrom ftsm:Connection
-                                              ]
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty ftsm:propertyOf ;
-                                                owl:someValuesFrom ftsm:Element
-                                              ]
-                                            )
-                              ] .
+###  http://www.semanticweb.org/szant/ontologies/2022/10/raaml#Scenario
+raaml:Scenario rdf:type owl:Class ;
+               owl:equivalentClass raaml:Situation ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty raaml:part ;
+                                 owl:someValuesFrom raaml:Situation
+                               ] .
+
+
+###  http://www.semanticweb.org/szant/ontologies/2022/10/raaml#Situation
+raaml:Situation rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
