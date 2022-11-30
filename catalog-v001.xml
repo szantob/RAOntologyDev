@@ -3,8 +3,6 @@
     <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/admin/ontologies/2022/10/ftma" uri="ftma.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/admin/ontologies/2022/10/ftma" uri="rao.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1669758339760" name="http://www.semanticweb.org/admin/ontologies/2022/10/ftma" uri="ftma.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1669758339760" name="http://www.semanticweb.org/admin/ontologies/2022/10/untitled-ontology-5" uri="wtd.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1669758339760" name="https://github.com/szantob/RAOntologyDev" uri="rao.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1669809570840" name="http://www.semanticweb.org/admin/ontologies/2022/10/ftma" uri="ftma.owl"/>
     </group>
 </catalog>
